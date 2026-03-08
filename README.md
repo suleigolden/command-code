@@ -43,6 +43,33 @@ This project discovers skills from a local `.skills/` directory, sends only ligh
    npm run build
    ```
 
+## Usage
+
+Run the agent with a prompt. The agent will route to a skill when one matches (e.g. README, changelog, developer profile).
+
+**Create a developer profile (CV / resume):**
+
+```bash
+npm run dev -- "Create a developer profile for me"
+```
+
+You can add context so the agent can fill in the profile (it will ask for missing details otherwise):
+
+```bash
+npm run dev -- "Write my developer profile. I'm a frontend engineer with 5 years experience in React and TypeScript, worked at Acme and Beta Inc."
+```
+
+**Other examples:**
+
+```bash
+npm run dev -- "generate a changelog from these commits: feat: login, fix: navbar"
+npm run dev -- "Write a README for this project"
+npm run dev -- "Generate a changelog from these release notes"
+npm run dev -- --debug "Create my developer CV"
+```
+
+Use `--debug` before the prompt to see which skill was selected and why.
+
 ## Running tests
 
 Run the test suite once:
