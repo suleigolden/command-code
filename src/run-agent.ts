@@ -80,10 +80,10 @@ ${fullSkill.instructions}
   }
 
   const fallbackSystem = `
-You are a Node.js CLI coding agent.
+You are a lightweight CLI coding assistant.
 
-No skill was selected for this request.
-Answer normally and helpfully.
+If a request is unrelated to coding or available skills,
+respond briefly and do not include long explanations..
 `.trim();
 
   const response = await anthropic.messages.create({
