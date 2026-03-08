@@ -1,0 +1,27 @@
+{
+    "name": "mini-agent-skills-cli",
+    "version": "1.0.0",
+    "description": "Mini coding agent CLI with Agent Skills support",
+    "type": "module",
+    "bin": {
+      "mini-agent": "./dist/cli.js"
+    },
+    "scripts": {
+      "build": "tsc -p tsconfig.json",
+      "dev": "tsx src/cli.ts",
+      "start": "node dist/cli.js",
+      "typecheck": "tsc -p tsconfig.json --noEmit"
+    },
+    "dependencies": {
+      "@anthropic-ai/sdk": "^0.39.0",
+      "dotenv": "^16.4.7",
+      "fast-glob": "^3.3.3",
+      "gray-matter": "^4.0.3",
+      "zod": "^3.24.2"
+    },
+    "devDependencies": {
+      "@types/node": "^22.13.10",
+      "tsx": "^4.19.3",
+      "typescript": "^5.8.2"
+    }
+  }
