@@ -20,7 +20,7 @@ This project discovers skills from a local `.skills/` directory, sends only ligh
 
    ```bash
    cd agent
-   npm install
+   npm install       # or: yarn install
    ```
 
 2. **Configure environment**
@@ -37,10 +37,10 @@ This project discovers skills from a local `.skills/` directory, sends only ligh
    ANTHROPIC_MODEL=claude-sonnet-4-6
    ```
 
-3. **Build** (optional for development; use `npm run dev` to run without building)
+3. **Build** (optional for development; use `npm run dev` / `yarn dev` to run without building)
 
    ```bash
-   npm run build
+   npm run build     # or: yarn build
    ```
 
 ## Usage
@@ -51,21 +51,32 @@ Run the agent with a prompt. The agent will route to a skill when one matches (e
 
 ```bash
 npm run dev -- "Create a developer profile for me"
+# or
+yarn dev -- "Create a developer profile for me"
 ```
 
 You can add context so the agent can fill in the profile (it will ask for missing details otherwise):
 
 ```bash
 npm run dev -- "Write my developer profile. I'm a frontend engineer with 5 years experience in React and TypeScript, worked at Acme and Beta Inc."
+# or
+yarn dev -- "Write my developer profile. I'm a frontend engineer with 5 years experience in React and TypeScript, worked at Acme and Beta Inc."
 ```
 
 **Other examples:**
 
 ```bash
 npm run dev -- "generate a changelog from these commits: feat: login, fix: navbar"
+yarn dev -- "generate a changelog from these commits: feat: login, fix: navbar"
+
 npm run dev -- "Write a README for this project"
+yarn dev -- "Write a README for this project"
+
 npm run dev -- "Generate a changelog from these release notes"
+yarn dev -- "Generate a changelog from these release notes"
+
 npm run dev -- --debug "Create my developer CV"
+yarn dev -- --debug "Create my developer CV"
 ```
 
 Use `--debug` before the prompt to see which skill was selected and why.
@@ -75,11 +86,11 @@ Use `--debug` before the prompt to see which skill was selected and why.
 Run the test suite once:
 
 ```bash
-npm run test
+npm run test        # or: yarn test
 ```
 
 Run tests in watch mode (re-run on file changes):
 
 ```bash
-npm run test:watch
+npm run test:watch  # or: yarn test
 ```
